@@ -1,0 +1,960 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #e0e0e0;
+    background: linear-gradient(135deg, #2c1810 0%, #3d2c47 50%, #1a1a2e 100%);
+    /*      Background Image (Joni GFS)
+    background-image: url(../Bilder/sigma.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    */
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+
+
+/* Header Styles */
+header {
+    background: rgba(30, 30, 40, 0.95);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header h1 a {
+    text-decoration: none;
+    color: #667eea;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    display: block;
+}
+
+header h1 a:hover {
+    color: #764ba2;
+    transform: scale(1.05);
+}
+
+
+
+
+
+/* Navigation Oben */
+.navOben {
+    display: flex;
+    align-items: center;
+}
+
+.navOben ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navOben {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.navOben a {
+    text-decoration: none;
+    color: #b0bec5;
+    font-weight: 600;
+    padding: 0.7rem 1.2rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    white-space: nowrap;
+    background: transparent;
+}
+
+.navOben a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    transition: left 0.3s ease;
+    z-index: -1;
+    border-radius: 25px;
+}
+
+.navOben a:hover::before {
+    left: 0;
+}
+
+.navOben a:hover {
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* Main Content */
+main {
+    margin-top: 120px;
+    padding: 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+
+/* Start Text Styles */
+.startText {
+    text-align: center;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease-out;
+}
+
+.startText h3 {
+    color: #e0e0e0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1rem;
+    font-size: 30px;
+}
+
+.startText h4 {
+    color: #b0bec5;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.startText img {
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease;
+    border: 5px solid #667eea;
+    margin-top: 10px;
+    margin-bottom: 200px;
+}
+
+.startText img:hover {
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+    cursor: default;
+}
+
+
+
+
+/* Text Startseite */
+.textStartseite {
+    background: rgba(40, 40, 50, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 3rem;
+    border-radius: 20px;
+    margin: 3rem 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    animation: slideInLeft 1s ease-out 0.5s both;
+    position: relative;
+    border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+.pStart {
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-left: 4px solid #667eea;
+    background: rgba(102, 126, 234, 0.1);
+    border-radius: 0 10px 10px 0;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.pStart:hover {
+    background: rgba(102, 126, 234, 0.15);
+    transform: translateX(10px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.pStart a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.pStart a:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}
+
+/* Lieblingssong */
+.Lieblingssong {
+    color: #e0e0e0;
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 3rem 0 1rem 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s ease-out 1s both;
+}
+
+.Lieblingssong a {
+    color: #ffeb3b;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.Lieblingssong a:hover {
+    color: #ffc107;
+    text-shadow: 0 0 10px rgba(255, 235, 59, 0.5);
+    cursor: text;
+}
+
+/* Spotify Embed */
+.song {
+    border-radius: 15px;
+    margin: 2rem 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    animation: slideInRight 1s ease-out 1.2s both;
+}
+
+
+/* Log-In Feld */
+
+.login-button a {
+    color: white;
+}
+
+.login-feld {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 3rem;
+    margin: 2rem auto;
+}
+.login-feld input {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    margin: 0.8rem 0;
+    border: 1px solid rgba(102, 126, 234, 0.3);
+    border-radius: 10px;
+    background-color: rgba(20, 20, 30, 0.8);
+    color: #e0e0e0;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.login-feld button {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+.login-feld button:hover {
+    background: linear-gradient(45deg, #764ba2, #667eea);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(102, 126, 234, 0.6);
+}
+.login-text {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: transparent;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+
+
+
+/* Navigation Unten */
+.navbarUnten {
+    background: rgba(20, 20, 30, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    margin-top: 4rem;
+    border-radius: 20px 20px 0 0;
+    border-top: 1px solid rgba(102, 126, 234, 0.3);
+}
+
+.navbarUnten ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.navbarUnten li {
+    display: inline-block;
+}
+
+.navbarUnten a {
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    transition: all 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    display: inline-block;
+}
+
+.navbarUnten a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+    background: linear-gradient(45deg, #764ba2, #667eea);
+}
+
+/* Footer */
+.footer-bottom {
+    background: rgba(15, 15, 20, 0.95);
+    color: #b0bec5;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+
+
+
+/* Bild-Seite*/
+
+.image-page {
+    margin-top: 0px;
+    padding: 2rem;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Überschrift für Bild-Seite */
+.image-page h3 {
+    color: #e0e0e0;
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 0px auto 30px auto;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: fadeInDown 1s ease-out;
+}
+
+/* Trennlinie */
+.image-page hr {
+    border: none;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #667eea, #764ba2, transparent);
+    margin-bottom: 40px;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
+    animation: slideInLeft 1s ease-out 0.3s both;
+}
+
+/* Bild-Container */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+    padding: 2rem;
+    background: rgba(40, 40, 50, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(102, 126, 234, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Einzelne Bilder */
+.image-page img {
+    width: 100%;
+    max-width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 3px solid #667eea;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s ease;
+    cursor: pointer;
+    filter: brightness(0.9) contrast(1.1);
+    animation: fadeInUp 0.8s ease-out;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Hover-Effekte für Bilder */
+.image-page img:hover {
+    transform: scale(1.05);
+    border-color: #764ba2;
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+    filter: brightness(1) contrast(1.2);
+    z-index: 10;
+}
+
+/* Bild-Reihen */
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+/* Lightbox-Effekt */
+.image-page img:active {
+    transform: scale(1.1);
+    box-shadow: 0 20px 50px rgba(102, 126, 234, 0.6);
+}
+
+/* Animationen für Bilder */
+.image-page img:nth-child(1) { animation-delay: 0.1s; }
+.image-page img:nth-child(2) { animation-delay: 0.2s; }
+.image-page img:nth-child(3) { animation-delay: 0.3s; }
+.image-page img:nth-child(4) { animation-delay: 0.4s; }
+.image-page img:nth-child(5) { animation-delay: 0.5s; }
+.image-page img:nth-child(6) { animation-delay: 0.6s; }
+
+/* Zusätzliche Animationen */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design für Bild-Seite */
+@media (max-width: 768px) {
+    .image-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+    
+    .image-page img {
+        max-width: 250px;
+        height: 320px;
+    }
+    
+    .image-page h3 {
+        font-size: 2rem;
+        margin: 15px auto 20px auto;
+    }
+    
+    .image-row {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-gallery {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .image-page img {
+        max-width: 200px;
+        height: 280px;
+    }
+    
+    .image-page h3 {
+        font-size: 1.5rem;
+    }
+    
+    .image-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+/* Zusätzliche Hover-Effekte */
+.image-page img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 15px;
+    pointer-events: none;
+}
+
+.image-page img:hover::before {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+/* Info-Seite */
+
+
+/* Steckbrief Container */
+.steckbrief-container {
+    background: rgba(40, 40, 50, 0.9);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(102, 126, 234, 0.3);
+    border-radius: 20px;
+    padding: 3rem;
+    margin: 2rem 0;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    animation: slideInUp 1s ease-out;
+}
+
+/* Steckbrief Überschriften */
+.steckbrief-container h4 {
+    color: #667eea;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: fadeInLeft 1s ease-out 0.3s both;
+}
+
+/* Steckbrief Text */
+.steckbrief-container p {
+    color: #e0e0e0;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    background: rgba(102, 126, 234, 0.05);
+    border-radius: 15px;
+    border-left: 4px solid #667eea;
+    animation: fadeInRight 1s ease-out 0.5s both;
+}
+
+/* Trennlinie im Steckbrief */
+.steckbrief-container hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #667eea, #764ba2, transparent);
+    margin: 2rem 0;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
+    animation: expandWidth 1s ease-out 0.7s both;
+}
+
+/* Freunde-Kommentare Sektion */
+.freunde-kommentare {
+    margin-top: 3rem;
+    animation: fadeIn 1s ease-out 1s both;
+}
+
+/* Namen der Freunde */
+.name {
+    color: #764ba2 !important;
+    font-size: 1.5rem !important;
+    font-weight: bold;
+    margin: 2rem 0 1rem 0 !important;
+    padding: 1rem;
+    background: rgba(118, 75, 162, 0.1);
+    border-radius: 10px;
+    border: 1px solid rgba(118, 75, 162, 0.3);
+    text-align: center;
+    text-shadow: 0 0 8px rgba(118, 75, 162, 0.5);
+    animation: bounceIn 0.8s ease-out;
+}
+
+/* Kommentare der Freunde */
+.kommentar {
+    background: rgba(30, 30, 45, 0.8) !important;
+    border: 1px solid rgba(102, 126, 234, 0.2) !important;
+    border-radius: 15px !important;
+    padding: 2rem !important;
+    margin: 1rem 0 2rem 0 !important;
+    color: #b0bec5 !important;
+    font-style: italic;
+    position: relative;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    animation: slideInLeft 0.8s ease-out;
+}
+
+/* Hover-Effekt für Kommentare */
+.kommentar:hover {
+    background: rgba(102, 126, 234, 0.1) !important;
+    border-color: #667eea !important;
+    transform: translateX(10px);
+    box-shadow: 0 12px 35px rgba(102, 126, 234, 0.2);
+}
+
+/* Animationen */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes expandWidth {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Responsive Design für Info-Seite */
+@media (max-width: 768px) {
+    .steckbrief-container {
+        padding: 2rem;
+        margin: 1rem 0;
+    }
+    
+    .steckbrief-container h4 {
+        font-size: 1.5rem;
+    }
+    
+    .steckbrief-container p {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+    
+    .name {
+        font-size: 1.3rem !important;
+        padding: 0.8rem;
+    }
+    
+    .kommentar {
+        padding: 1.5rem !important;
+        margin: 0.8rem 0 1.5rem 0 !important;
+    }
+    
+    .kommentar::before,
+    .kommentar::after {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .steckbrief-container {
+        padding: 1.5rem;
+    }
+    
+    .steckbrief-container h4 {
+        font-size: 1.3rem;
+    }
+    
+    .steckbrief-container p {
+        font-size: 0.95rem;
+        padding: 0.8rem;
+    }
+    
+    .name {
+        font-size: 1.2rem !important;
+        padding: 0.6rem;
+    }
+    
+    .kommentar {
+        padding: 1rem !important;
+        margin: 0.5rem 0 1rem 0 !important;
+    }
+    
+    .kommentar::before,
+    .kommentar::after {
+        font-size: 2.5rem;
+    }
+}
+
+/* Scroll-Animationen */
+.steckbrief-container:nth-child(odd) {
+    animation-delay: 0.2s;
+}
+
+.steckbrief-container:nth-child(even) {
+    animation-delay: 0.4s;
+}
+
+
+
+
+
+
+/* Animationen */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
+    
+    header h1 a {
+        font-size: 2rem;
+    }
+    
+    .navOben ul {
+        gap: 1rem;
+        justify-content: center;
+    }
+    
+    main {
+        margin-top: 160px;
+        padding: 1rem;
+    }
+    
+    .textStartseite {
+        padding: 2rem;
+        margin: 2rem 0;
+    }
+    
+    .startText img {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .navbarUnten ul {
+        gap: 1rem;
+    }
+    
+    .navbarUnten a {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .maps iframe {
+        width: 100%;
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navOben ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .startText img {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .textStartseite {
+        padding: 1.5rem;
+    }
+    
+    .pStart {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+}
+
+/* Scroll-Effekte */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hover-Effekte für bessere Interaktivität */
+.startText img,
+.song,
+.maps iframe {
+    cursor: pointer;
+}
+
+/* Zusätzliche Hover-Animationen */
+.pStart::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+    transition: width 0.3s ease;
+    z-index: -1;
+    border-radius: 0 10px 10px 0;
+}
+
+.pStart:hover::before {
+    width: 100%;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #2c1810;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #667eea, #764ba2);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #764ba2, #667eea);
+}
