@@ -217,6 +217,8 @@ main {
     text-decoration: underline;
 }
 
+
+
 /* Lieblingssong */
 .Lieblingssong {
     color: #e0e0e0;
@@ -239,6 +241,8 @@ main {
     text-shadow: 0 0 10px rgba(255, 235, 59, 0.5);
     cursor: text;
 }
+
+
 
 /* Spotify Embed */
 .song {
@@ -641,6 +645,450 @@ main {
     transform: translateX(10px);
     box-shadow: 0 12px 35px rgba(102, 126, 234, 0.2);
 }
+
+
+
+/* Steckbrief Tabelle Styling */
+.steckbrief-tabelle {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: rgba(20, 20, 30, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(102, 126, 234, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    overflow-x: auto;
+}
+
+/* Tabelle Grundstyling */
+.steckbrief-tabelle table {
+    width: 100%;
+    border-collapse: collapse;
+    background: transparent;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Haupt-Zeile (Wochentage) */
+.haupt-zeile th {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    padding: 1rem 0.8rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* Erste Spalte der Haupt-Zeile */
+.haupt-zeile th:first-child {
+    background: rgba(30, 30, 40, 0.9);
+    color: #667eea;
+    border: 1px solid rgba(102, 126, 234, 0.3);
+}
+
+/* Haupt-Spalte (Uhrzeiten) */
+.haupt-spalte {
+    background: linear-gradient(90deg, #667eea, #764ba2) !important;
+    color: white !important;
+    padding: 1rem 0.8rem !important;
+    text-align: center !important;
+    font-weight: bold !important;
+    font-size: 0.9rem !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+    writing-mode: horizontal-tb !important;
+}
+
+/* Hover-Effekte für Haupt-Spalte */
+.haupt-spalte:hover {
+    background: linear-gradient(90deg, #764ba2, #667eea) !important;
+    transform: translateX(2px) !important;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4) !important;
+    cursor: default;
+}
+
+/* Normale Tabellen-Zellen */
+.steckbrief-tabelle td,
+.steckbrief-tabelle th:not(.haupt-spalte):not(.haupt-zeile th) {
+    background: rgba(40, 40, 50, 0.6);
+    color: #e0e0e0;
+    padding: 0.8rem 0.6rem;
+    text-align: center;
+    border: 1px solid rgba(102, 126, 234, 0.2);
+    transition: all 0.3s ease;
+    font-size: 0.85rem;
+}
+
+/* Hover-Effekte für normale Zellen */
+.steckbrief-tabelle td:hover,
+.steckbrief-tabelle th:not(.haupt-spalte):not(.haupt-zeile th):hover {
+    background: rgba(102, 126, 234, 0.15);
+    color: #f0f0f0;
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+    cursor: default;
+}
+
+/* Hover-Effekte für Haupt-Zeile */
+.haupt-zeile th:hover {
+    background: linear-gradient(45deg, #764ba2, #667eea);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* Spezielle Styling für verschiedene Aktivitäten */
+.steckbrief-tabelle th:contains("Schule"),
+.steckbrief-tabelle td:contains("Schule") {
+    background: rgba(76, 175, 80, 0.2);
+    border-color: rgba(76, 175, 80, 0.3);
+}
+
+.steckbrief-tabelle th:contains("Gym"),
+.steckbrief-tabelle td:contains("Gym") {
+    background: rgba(255, 87, 34, 0.2);
+    border-color: rgba(255, 87, 34, 0.3);
+}
+
+.steckbrief-tabelle th:contains("Arbeit"),
+.steckbrief-tabelle td:contains("Arbeit") {
+    background: rgba(255, 193, 7, 0.2);
+    border-color: rgba(255, 193, 7, 0.3);
+}
+
+.steckbrief-tabelle th:contains("Chillen"),
+.steckbrief-tabelle td:contains("Chillen") {
+    background: rgba(33, 150, 243, 0.2);
+    border-color: rgba(33, 150, 243, 0.3);
+}
+
+.steckbrief-tabelle th:contains("Lernen"),
+.steckbrief-tabelle td:contains("Lernen") {
+    background: rgba(156, 39, 176, 0.2);
+    border-color: rgba(156, 39, 176, 0.3);
+}
+
+.steckbrief-tabelle th:contains("Goonen"),
+.steckbrief-tabelle td:contains("Goonen") {
+    background: rgba(233, 30, 99, 0.2);
+    border-color: rgba(233, 30, 99, 0.3);
+}
+
+/* Responsive Design für Tabelle */
+@media (max-width: 768px) {
+    .steckbrief-tabelle {
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+    
+    .steckbrief-tabelle table {
+        font-size: 0.8rem;
+    }
+    
+    .haupt-zeile th,
+    .haupt-spalte {
+        padding: 0.6rem 0.4rem !important;
+        font-size: 0.75rem !important;
+    }
+    
+    .steckbrief-tabelle td,
+    .steckbrief-tabelle th:not(.haupt-spalte):not(.haupt-zeile th) {
+        padding: 0.5rem 0.3rem;
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .steckbrief-tabelle {
+        padding: 0.5rem;
+        overflow-x: scroll;
+    }
+    
+    .steckbrief-tabelle table {
+        min-width: 600px;
+        font-size: 0.7rem;
+    }
+    
+    .haupt-zeile th,
+    .haupt-spalte {
+        padding: 0.4rem 0.2rem !important;
+        font-size: 0.65rem !important;
+    }
+    
+    .steckbrief-tabelle td,
+    .steckbrief-tabelle th:not(.haupt-spalte):not(.haupt-zeile th) {
+        padding: 0.3rem 0.2rem;
+        font-size: 0.6rem;
+    }
+}
+
+/* Scrollbar für horizontales Scrollen auf Mobile */
+.steckbrief-tabelle::-webkit-scrollbar {
+    height: 8px;
+}
+
+.steckbrief-tabelle::-webkit-scrollbar-track {
+    background: rgba(20, 20, 30, 0.5);
+    border-radius: 4px;
+}
+
+.steckbrief-tabelle::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 4px;
+}
+
+.steckbrief-tabelle::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(90deg, #764ba2, #667eea);
+}
+
+/* Zusätzliche Effekte */
+.steckbrief-tabelle table tr:hover {
+    background: rgba(102, 126, 234, 0.05);
+}
+
+/* Zebra-Streifen Effekt (optional) */
+.steckbrief-tabelle table tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.steckbrief-tabelle table tr:nth-child(odd) {
+    background: rgba(0, 0, 0, 0.02);
+}
+
+
+
+/* Steckbrief Top 5 Container */
+.Steckbrief-top5 {
+    margin: 2rem 0;
+    padding: 2rem;
+    background: rgba(20, 20, 30, 0.8);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(102, 126, 234, 0.3);
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Überschrift für Top 5 (falls gewünscht) */
+.Steckbrief-top5::before {
+    content: "Top 5 Traummottoräder";
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* Ordered List Styling */
+.Steckbrief-top5 ol {
+    list-style: none;
+    counter-reset: top5-counter;
+    padding: 0;
+    margin: 1rem 0 0 0;
+}
+
+/* List Items */
+.Steckbrief-top5 li {
+    counter-increment: top5-counter;
+    background: rgba(40, 40, 50, 0.7);
+    margin: 1rem 0;
+    padding: 1.5rem 2rem 1.5rem 4rem;
+    border-radius: 15px;
+    border: 1px solid rgba(102, 126, 234, 0.2);
+    color: #e0e0e0;
+    font-size: 1.1rem;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+/* Nummerierung */
+.Steckbrief-top5 li::before {
+    content: counter(top5-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px 0 0 15px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 0 10px rgba(102, 126, 234, 0.3);
+}
+
+/* Hover-Effekte */
+.Steckbrief-top5 li:hover {
+    background: rgba(102, 126, 234, 0.15);
+    border-color: #667eea;
+    transform: translateX(10px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+}
+
+.Steckbrief-top5 li:hover::before {
+    background: linear-gradient(135deg, #764ba2, #667eea);
+    transform: scale(1.1);
+}
+
+/* Spezielle Farben für verschiedene Plätze */
+.Steckbrief-top5 li:nth-child(1)::before {
+    background: linear-gradient(135deg, #ffd700, #ffb300); /* Gold */
+}
+
+.Steckbrief-top5 li:nth-child(2)::before {
+    background: linear-gradient(135deg, #c0c0c0, #a8a8a8); /* Silber */
+}
+
+.Steckbrief-top5 li:nth-child(3)::before {
+    background: linear-gradient(135deg, #cd7f32, #b8860b); /* Bronze */
+}
+
+.Steckbrief-top5 li:nth-child(4)::before,
+.Steckbrief-top5 li:nth-child(5)::before {
+    background: linear-gradient(135deg, #667eea, #764ba2); /* Lila */
+}
+
+/* Platz 1 - Besondere Hervorhebung */
+.Steckbrief-top5 li:nth-child(1) {
+    border: 2px solid #ffd700;
+    background: rgba(255, 215, 0, 0.1);
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.2);
+}
+
+.Steckbrief-top5 li:nth-child(1):hover {
+    background: rgba(255, 215, 0, 0.2);
+    border-color: #ffd700;
+    box-shadow: 0 12px 30px rgba(255, 215, 0, 0.4);
+}
+
+/* Platz 2 - Silber Hervorhebung */
+.Steckbrief-top5 li:nth-child(2) {
+    border: 2px solid #c0c0c0;
+    background: rgba(192, 192, 192, 0.1);
+}
+
+.Steckbrief-top5 li:nth-child(2):hover {
+    background: rgba(192, 192, 192, 0.15);
+    border-color: #c0c0c0;
+}
+
+/* Platz 3 - Bronze Hervorhebung */
+.Steckbrief-top5 li:nth-child(3) {
+    border: 2px solid #cd7f32;
+    background: rgba(205, 127, 50, 0.1);
+}
+
+.Steckbrief-top5 li:nth-child(3):hover {
+    background: rgba(205, 127, 50, 0.15);
+    border-color: #cd7f32;
+}
+
+/* Trophäen-Icons (optional) */
+.Steckbrief-top5 li:nth-child(1)::after {
+    content: "🏆";
+    position: absolute;
+    right: 15px;
+    font-size: 1.5rem;
+    opacity: 0.7;
+}
+
+.Steckbrief-top5 li:nth-child(2)::after {
+    content: "🥈";
+    position: absolute;
+    right: 15px;
+    font-size: 1.5rem;
+    opacity: 0.7;
+}
+
+.Steckbrief-top5 li:nth-child(3)::after {
+    content: "🥉";
+    position: absolute;
+    right: 15px;
+    font-size: 1.5rem;
+    opacity: 0.7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .Steckbrief-top5 {
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+    }
+    
+    .Steckbrief-top5 li {
+        padding: 1rem 1.5rem 1rem 3.5rem;
+        font-size: 1rem;
+        min-height: 50px;
+    }
+    
+    .Steckbrief-top5 li::before {
+        width: 40px;
+        font-size: 1.2rem;
+    }
+    
+    .Steckbrief-top5::before {
+        font-size: 0.8rem;
+        padding: 0.4rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .Steckbrief-top5 {
+        padding: 1rem;
+    }
+    
+    .Steckbrief-top5 li {
+        padding: 0.8rem 1rem 0.8rem 3rem;
+        font-size: 0.9rem;
+        min-height: 45px;
+    }
+    
+    .Steckbrief-top5 li::before {
+        width: 35px;
+        font-size: 1rem;
+    }
+    
+    .Steckbrief-top5 li:nth-child(1)::after,
+    .Steckbrief-top5 li:nth-child(2)::after,
+    .Steckbrief-top5 li:nth-child(3)::after {
+        font-size: 1.2rem;
+        right: 10px;
+    }
+}
+
+/* Zusätzliche Hover-Animation für Container */
+.Steckbrief-top5:hover {
+    border-color: rgba(102, 126, 234, 0.5);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+/* Leere Listen-Items Placeholder */
+.Steckbrief-top5 li:empty::after {
+    content: "Hier könnte dein Text stehen...";
+    color: #8a8a9b;
+    font-style: italic;
+    opacity: 0.6;
+}
+
+
+
+
 
 /* Animationen */
 @keyframes slideInUp {
